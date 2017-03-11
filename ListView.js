@@ -1,4 +1,6 @@
 var ListView = function(scrollElem){
+  'use strict'
+
   var self = {};
   self.relativeFirstIndex = 0;
   self.relativeLastIndex = 0;
