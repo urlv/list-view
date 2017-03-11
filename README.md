@@ -30,11 +30,21 @@ lv.onOut(function(index){
 ```
 <br />
 
-we can chain it all together
+We can chain it all together
 ```js
 new ListView(div).onIn(function(x){
-  h1.innerHTML = 'item ' + x + ' is entered!';
+  h1.innerHTML = 'item ' + x + ' entered!';
 }).onOut(function(x){
-  h1.innerHTML = 'item ' + x + ' has left!';
+  h1.innerHTML = 'item ' + x + ' left!';
 });
 ```
+
+<br />
+<br />
+## Functions declaration
+```js
+onIn(functionToInvokeWhenItemEntered)
+onOut(functionToInvokeWhenItemLeft)
+```
+The function have one parameter that indicate the index of element.
+You can see how we using it above
