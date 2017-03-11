@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>list view</title>
+    <style>
+      h1{
+        text-align: center;
+      }
+      div{
+        background: #e4e4e4;
+        width: 180px;
+        height: 200px;
+        margin: 40px auto;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scroll the list and see</h1>
+    <div>
+      <p>item 000000000</p>
+      <p>item 111111111</p>
+      <p>item 222222222</p>
+      <p>item 333333333</p>
+      <p>item 444444444</p>
+      <p>item 555555555</p>
+      <p>item 666666666</p>
+      <p>item 777777777</p>
+      <p>item 888888888</p>
+      <p>item 999999999</p>
+      <p>item AAAAAAAAA</p>
+      <p>item BBBBBBBBB</p>
+      <p>item CCCCCCCCC</p>
+      <p>item DDDDDDDDD</p>
+      <p>item EEEEEEEEE</p>
+    </div>
+
+    <script src="ListView.js"></script>
+    <script>
+      var div = document.querySelector('div');
+      var h1 = document.querySelector('h1');
+
+      new ListView(div).onIn(function(x){
+        h1.innerHTML = 'item ' + x + ' is entered!';
+      }).onOut(function(x){
+        h1.innerHTML = 'item ' + x + ' has left!';
+      });
+    </script>
+  </body>
+</html>
