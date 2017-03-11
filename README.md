@@ -7,7 +7,7 @@ Gives the ability to know when each item entered/left the list view (scroll elem
 
 Include the script
 ```html
-<script src="canvasEvents.min.js"></script>
+<script src="listView.min.js"></script>
 ```
 
 Init the `ListView` with scroll element (list of items)
