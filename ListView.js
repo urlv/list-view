@@ -30,7 +30,7 @@ var ListView = function(scrollElem){
 
     for(;curr < n; ++curr){
       // Item goes out
-      if(scrollOffset > (children[curr].offsetTop + self.getMarginTop(children[curr]) - scrollElem.offsetTop)){
+      if(scrollOffset > (children[curr].offsetTop + children[curr].offsetHeight - scrollElem.offsetTop)){
         self.onOut(self.relativeFirstIndex);
         ++self.relativeFirstIndex;
       }else if(curr > last){
@@ -60,7 +60,7 @@ var ListView = function(scrollElem){
           --self.relativeLastIndex;
         }else if(curr <= last){
           // Item entered
-          if(scrollOffset < (children[curr].offsetTop + self.getMarginTop(children[curr]) - scrollElem.offsetTop)){
+          if(scrollOffset < (children[curr].offsetTop + children[curr].offsetHeight - scrollElem.offsetTop)){
               --self.relativeFirstIndex;
               self.onIn(self.relativeFirstIndex);
           }else{
@@ -80,11 +80,6 @@ var ListView = function(scrollElem){
       }
       self.lastScrollTop = scrollElem.scrollTop;
     },10);
-  }
-
-  // Helper function
-  self.getMarginTop = function(elem){
-    return parseInt(getComputedStyle(elem).marginTop,10);
   }
 
   var api = {
