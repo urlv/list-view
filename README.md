@@ -41,6 +41,7 @@ new ListView(div).onIn(function(x){
 
 <br />
 <br />
+
 ## Functions declaration
 ```js
 onIn(functionToInvokeWhenItemEntered)
