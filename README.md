@@ -1,7 +1,7 @@
 # list-view
 Gives the ability to know when each item entered/left the list view (scroll element)
 
-[demo](https://urlvnbrg.github.io/list-view/)
+[demo](https://urlv.github.io/list-view/)
 
 ## Quick Start
 
